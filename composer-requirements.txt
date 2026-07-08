@@ -1,0 +1,6 @@
+Paket tambahan yang perlu di-install setelah composer create-project laravel/laravel:
+
+composer require maatwebsite/excel
+composer require barryvdh/laravel-dompdf
+
+(Kedua paket ini dipakai untuk fitur Export Excel & Export PDF sesuai ketentuan tugas besar)

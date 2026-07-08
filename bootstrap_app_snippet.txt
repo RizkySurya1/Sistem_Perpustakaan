@@ -1,0 +1,16 @@
+Tambahkan alias middleware "role" di file bootstrap/app.php (Laravel 11/12),
+di dalam method withMiddleware():
+
+->withMiddleware(function (Middleware $middleware) {
+    $middleware->alias([
+        'role' => \App\Http\Middleware\CheckRole::class,
+    ]);
+})
+
+Jika menggunakan Laravel 10 (struktur app/Http/Kernel.php), tambahkan di
+$middlewareAliases (atau $routeMiddleware):
+
+protected $middlewareAliases = [
+    ...
+    'role' => \App\Http\Middleware\CheckRole::class,
+];
